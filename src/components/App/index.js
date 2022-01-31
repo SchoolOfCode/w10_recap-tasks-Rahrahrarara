@@ -1,31 +1,18 @@
+import ArticleDisplay from "../ArticleDisplay";
+import Home from "../Home";
 import "./App.css";
-import articles from "../../libs/articles";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <main className="App">
-      <h1>WikiPigeon</h1>
-      {articles.map((article) => {
-        return (
-          <article key={article.id} className="post">
-            <h2>{article.title}</h2>
-            {article.paragraphs.map((paragraph) => (
-              <p key={paragraph.id}>{paragraph.text}</p>
-            ))}
-            <button className="like-button">Like 👍</button>
-            <section className="comment-section">
-              {article.comments.map((comment) => {
-                return (
-                  <div key={comment.id} className="comment">
-                    <h4>{comment.name} says:</h4>
-                    <p>{comment.text}</p>
-                  </div>
-                );
-              })}
-            </section>
-          </article>
-        );
-      })}
+      <nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="articles" element={<ArticleDisplay />} />
+          {/* <Route path="contact" element={<Contact />} /> */}
+        </Routes>
+      </nav>
     </main>
   );
 }
