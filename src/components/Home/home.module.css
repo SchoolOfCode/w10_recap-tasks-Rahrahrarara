@@ -1,0 +1,10 @@
+.background {
+  background-image: url("./pigeons.jpeg");
+  opacity: 0.4;
+  margin-top: 20px;
+}
+
+.pigeonimage {
+  max-width: 100%;
+  height: auto;
+}

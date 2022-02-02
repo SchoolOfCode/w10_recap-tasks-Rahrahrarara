@@ -1,0 +1,21 @@
+.logo {
+  color: black;
+  font-size: 40px;
+  margin: 10px;
+  text-decoration: underline;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.header {
+  border: 1px black solid;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(236, 229, 229);
+  padding: 10px;
+}
+
+.loginsection {
+  /* margin: 10px; */
+  align-self: center;
+}
