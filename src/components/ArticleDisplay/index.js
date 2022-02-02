@@ -13,12 +13,13 @@ const ArticleDisplay = () => {
       {articles.map((article) => {
         return (
           <div key={article.id}>
-            <Article
+            <Link to={`/articles/${article.id}`}> {article.title}</Link>
+            {/* <Article
               title={article.title}
               paragraph={article.paragraphs.map((paragraph) => {
                 return <p key={paragraph.id}>{paragraph.text}</p>;
               })}
-            />
+            /> */}
 
             <LikeButton />
           </div>

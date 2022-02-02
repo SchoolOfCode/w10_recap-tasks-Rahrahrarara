@@ -7,8 +7,10 @@ import { Auth0Provider } from "@auth0/auth0-react";
 
 ReactDOM.render(
   <Auth0Provider
-    domain="dev-3tlaii20.eu.auth0.com"
-    clientId="NBxyqYROwpfMUJwcxw7yK5ZZcbdtsvAV"
+    domain={process.env.REACT_APP_DOMAIN}
+    clientId={process.env.REACT_APP_CLIENTID}
+    // domain="dev-3tlaii20.eu.auth0.com"
+    // clientId="NBxyqYROwpfMUJwcxw7yK5ZZcbdtsvAV"
     redirectUri={window.location.origin}
   >
     <BrowserRouter>
@@ -18,3 +20,6 @@ ReactDOM.render(
   </Auth0Provider>,
   document.getElementById("root")
 );
+
+//  = dev-3tlaii20.eu.auth0.com
+// REACT_APP_CLIENTID
