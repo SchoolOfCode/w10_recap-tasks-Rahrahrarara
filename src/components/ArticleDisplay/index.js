@@ -21,7 +21,7 @@ const ArticleDisplay = () => {
               })}
             /> */}
 
-            <LikeButton />
+            {/* <LikeButton /> */}
           </div>
         );
       })}
